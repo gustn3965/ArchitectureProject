@@ -14,8 +14,6 @@
 		DB8BC10B2C626253008BB62C /* MovieTCATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC10A2C626253008BB62C /* MovieTCATests.swift */; };
 		DB8BC1152C626253008BB62C /* MovieTCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1142C626253008BB62C /* MovieTCAUITests.swift */; };
 		DB8BC1172C626253008BB62C /* MovieTCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1162C626253008BB62C /* MovieTCAUITestsLaunchTests.swift */; };
-		DB8BC12D2C62626C008BB62C /* MovieNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8BC1292C62625E008BB62C /* MovieNetwork.framework */; };
-		DB8BC12E2C62626C008BB62C /* MovieNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB8BC1292C62625E008BB62C /* MovieNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB8BC1352C626D7C008BB62C /* MovieFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1342C626D7C008BB62C /* MovieFetch.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,16 +32,16 @@
 			remoteGlobalIDString = DB8BC0F52C626252008BB62C;
 			remoteInfo = MovieTCA;
 		};
-		DB8BC1282C62625E008BB62C /* PBXContainerItemProxy */ = {
+		DB8BC1812C63C823008BB62C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DB8BC1232C62625E008BB62C /* MovieNetwork.xcodeproj */;
+			containerPortal = DB8BC17C2C63C823008BB62C /* MovieNetwork.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DB292B8E2C6257B7005F153B;
 			remoteInfo = MovieNetwork;
 		};
-		DB8BC12A2C62625E008BB62C /* PBXContainerItemProxy */ = {
+		DB8BC1832C63C823008BB62C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DB8BC1232C62625E008BB62C /* MovieNetwork.xcodeproj */;
+			containerPortal = DB8BC17C2C63C823008BB62C /* MovieNetwork.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DB292B982C6257B7005F153B;
 			remoteInfo = MovieNetworkTests;
@@ -57,7 +55,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DB8BC12E2C62626C008BB62C /* MovieNetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,9 +72,9 @@
 		DB8BC1102C626253008BB62C /* MovieTCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTCAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8BC1142C626253008BB62C /* MovieTCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTCAUITests.swift; sourceTree = "<group>"; };
 		DB8BC1162C626253008BB62C /* MovieTCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		DB8BC1232C62625E008BB62C /* MovieNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MovieNetwork.xcodeproj; path = ../../MovieNetwork/MovieNetwork.xcodeproj; sourceTree = "<group>"; };
 		DB8BC1342C626D7C008BB62C /* MovieFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFetch.swift; sourceTree = "<group>"; };
 		DB8BC1372C62709F008BB62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DB8BC17C2C63C823008BB62C /* MovieNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MovieNetwork.xcodeproj; path = ../MovieNetwork/MovieNetwork.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8BC12D2C62626C008BB62C /* MovieNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +105,7 @@
 		DB8BC0ED2C626252008BB62C = {
 			isa = PBXGroup;
 			children = (
-				DB8BC1232C62625E008BB62C /* MovieNetwork.xcodeproj */,
+				DB8BC17C2C63C823008BB62C /* MovieNetwork.xcodeproj */,
 				DB8BC0F82C626252008BB62C /* MovieTCA */,
 				DB8BC1092C626253008BB62C /* MovieTCATests */,
 				DB8BC1132C626253008BB62C /* MovieTCAUITests */,
@@ -166,20 +162,20 @@
 			path = MovieTCAUITests;
 			sourceTree = "<group>";
 		};
-		DB8BC1242C62625E008BB62C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DB8BC1292C62625E008BB62C /* MovieNetwork.framework */,
-				DB8BC12B2C62625E008BB62C /* MovieNetworkTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		DB8BC12C2C62626C008BB62C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB8BC17D2C63C823008BB62C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB8BC1822C63C823008BB62C /* MovieNetwork.framework */,
+				DB8BC1842C63C823008BB62C /* MovieNetworkTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +271,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = DB8BC1242C62625E008BB62C /* Products */;
-					ProjectRef = DB8BC1232C62625E008BB62C /* MovieNetwork.xcodeproj */;
+					ProductGroup = DB8BC17D2C63C823008BB62C /* Products */;
+					ProjectRef = DB8BC17C2C63C823008BB62C /* MovieNetwork.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -289,18 +285,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		DB8BC1292C62625E008BB62C /* MovieNetwork.framework */ = {
+		DB8BC1822C63C823008BB62C /* MovieNetwork.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = MovieNetwork.framework;
-			remoteRef = DB8BC1282C62625E008BB62C /* PBXContainerItemProxy */;
+			remoteRef = DB8BC1812C63C823008BB62C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		DB8BC12B2C62625E008BB62C /* MovieNetworkTests.xctest */ = {
+		DB8BC1842C63C823008BB62C /* MovieNetworkTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = MovieNetworkTests.xctest;
-			remoteRef = DB8BC12A2C62625E008BB62C /* PBXContainerItemProxy */;
+			remoteRef = DB8BC1832C63C823008BB62C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
