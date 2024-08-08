@@ -20,6 +20,7 @@
 		DB8BC1862C650499008BB62C /* MovieDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1852C650499008BB62C /* MovieDetailRepository.swift */; };
 		DB8BC1882C65056F008BB62C /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1872C65056F008BB62C /* MovieDetail.swift */; };
 		DB8BC18A2C650834008BB62C /* MovieDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1892C650834008BB62C /* MovieDetailTests.swift */; };
+		DB8BC18C2C650C05008BB62C /* MovieListAndDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC18B2C650C05008BB62C /* MovieListAndDetailTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DB8BC1852C650499008BB62C /* MovieDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRepository.swift; sourceTree = "<group>"; };
 		DB8BC1872C65056F008BB62C /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		DB8BC1892C650834008BB62C /* MovieDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTests.swift; sourceTree = "<group>"; };
+		DB8BC18B2C650C05008BB62C /* MovieListAndDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListAndDetailTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +103,10 @@
 		DB292B9C2C6257B7005F153B /* MovieNetworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB8BC18D2C650C0B008BB62C /* Helper */,
 				DB292B9D2C6257B7005F153B /* MovieListTests.swift */,
 				DB8BC1892C650834008BB62C /* MovieDetailTests.swift */,
-				DB8BC13D2C63C45E008BB62C /* XCTestHelper.swift */,
+				DB8BC18B2C650C05008BB62C /* MovieListAndDetailTests.swift */,
 			);
 			path = MovieNetworkTests;
 			sourceTree = "<group>";
@@ -134,6 +137,14 @@
 				DB8BC1382C63C3D4008BB62C /* Session.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DB8BC18D2C650C0B008BB62C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DB8BC13D2C63C45E008BB62C /* XCTestHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB8BC13E2C63C45E008BB62C /* XCTestHelper.swift in Sources */,
+				DB8BC18C2C650C05008BB62C /* MovieListAndDetailTests.swift in Sources */,
 				DB292B9E2C6257B7005F153B /* MovieListTests.swift in Sources */,
 				DB8BC18A2C650834008BB62C /* MovieDetailTests.swift in Sources */,
 			);

@@ -45,9 +45,9 @@ final class MovieListTests: XCTestCase {
                         }
                     }
                 """
-        let mockNetwork = MockKOBISSession(mockJson: jsonData)
+        let mockSession = MockKOBISSession(mockJson: jsonData)
         
-        let movieRepo = MovieListRepository(network: DefaultNetwork(session: mockNetwork))
+        let movieRepo = MovieListRepository(network: DefaultNetwork(session: mockSession))
         
         performAsyncTest { expectation in
             movieRepo.getMovieList()
