@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-protocol MovieListNetworkProtocol {
+protocol MovieListRepositoryProtocol {
     
-    func getMovieList() -> AnyPublisher<[Movie], MError>
+    func getMovieList() -> AnyPublisher<[MovieListItem], MError>
 }
 
-public class MovieListRepository {
+public class MovieListRepository: MovieListRepositoryProtocol {
     
     var network: NetworkProtocol
     
@@ -21,7 +21,7 @@ public class MovieListRepository {
         self.network = network
     }
     
-    public func getMovieList() -> AnyPublisher<[Movie], MError> {
+    public func getMovieList() -> AnyPublisher<[MovieListItem], MError> {
         
         let anyPulbisher: AnyPublisher<BoxOfficeResponse, MError> = network.request(endpoint: MovieEndpoint.movieList)
         

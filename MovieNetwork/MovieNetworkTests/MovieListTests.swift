@@ -14,7 +14,7 @@ final class MovieListTests: XCTestCase {
     
     var cancellable = Set<AnyCancellable>()
     
-    func test_KOBIS일별박스오피스_요청하여_Movie디코딩_가능하다() throws {
+    func test_KOBIS일별박스오피스응답_Movie디코딩_가능하다() throws {
         
         let jsonData = """
                 {
@@ -62,6 +62,8 @@ final class MovieListTests: XCTestCase {
                     }
                 } receiveValue: { movies in
                     print(movies)
+                    print()
+                    print(movies.first?.movieTitle)
                     XCTAssertTrue(true)
                 }
                 .store(in: &self.cancellable)
