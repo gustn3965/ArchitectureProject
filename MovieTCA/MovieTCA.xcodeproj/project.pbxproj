@@ -20,6 +20,9 @@
 		DB8BC1A12C651149008BB62C /* MovieNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB8BC19D2C651140008BB62C /* MovieNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB8BC1A62C6896C3008BB62C /* TCATestSampleCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1A52C6896C3008BB62C /* TCATestSampleCode.swift */; };
 		DB8BC1A82C689AD2008BB62C /* MovieListFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1A72C689AD2008BB62C /* MovieListFeatureTest.swift */; };
+		DB8BC1AD2C68DBF8008BB62C /* MovieDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1AC2C68DBF8008BB62C /* MovieDetailFeature.swift */; };
+		DB8BC1AF2C68DD6B008BB62C /* MovieDetailEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1AE2C68DD6B008BB62C /* MovieDetailEnvironment.swift */; };
+		DB8BC1B12C68DF3A008BB62C /* MovieDetailFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1B02C68DF3A008BB62C /* MovieDetailFeatureTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		DB8BC1972C651140008BB62C /* MovieNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MovieNetwork.xcodeproj; path = ../MovieNetwork/MovieNetwork.xcodeproj; sourceTree = "<group>"; };
 		DB8BC1A52C6896C3008BB62C /* TCATestSampleCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCATestSampleCode.swift; sourceTree = "<group>"; };
 		DB8BC1A72C689AD2008BB62C /* MovieListFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListFeatureTest.swift; sourceTree = "<group>"; };
+		DB8BC1AC2C68DBF8008BB62C /* MovieDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailFeature.swift; sourceTree = "<group>"; };
+		DB8BC1AE2C68DD6B008BB62C /* MovieDetailEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailEnvironment.swift; sourceTree = "<group>"; };
+		DB8BC1B02C68DF3A008BB62C /* MovieDetailFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailFeatureTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 		DB8BC0F82C626252008BB62C /* MovieTCA */ = {
 			isa = PBXGroup;
 			children = (
+				DB8BC1AB2C68DBED008BB62C /* MovieDetailFeature */,
 				DB8BC1912C650F33008BB62C /* MovieListFeature */,
 				DB8BC1372C62709F008BB62C /* Info.plist */,
 				DB8BC0F92C626252008BB62C /* MovieTCAApp.swift */,
@@ -160,6 +167,7 @@
 				DB8BC1AA2C689BB6008BB62C /* Helper */,
 				DB8BC1A92C689AD5008BB62C /* SampleCode */,
 				DB8BC1A72C689AD2008BB62C /* MovieListFeatureTest.swift */,
+				DB8BC1B02C68DF3A008BB62C /* MovieDetailFeatureTest.swift */,
 			);
 			path = MovieTCATests;
 			sourceTree = "<group>";
@@ -183,8 +191,8 @@
 		DB8BC1912C650F33008BB62C /* MovieListFeature */ = {
 			isa = PBXGroup;
 			children = (
-				DB8BC1942C651015008BB62C /* MovieListEnvironment.swift */,
 				DB8BC1922C650F3F008BB62C /* MovieListFeature.swift */,
+				DB8BC1942C651015008BB62C /* MovieListEnvironment.swift */,
 				DB8BC0FB2C626252008BB62C /* MovieListView.swift */,
 			);
 			path = MovieListFeature;
@@ -212,6 +220,15 @@
 			children = (
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		DB8BC1AB2C68DBED008BB62C /* MovieDetailFeature */ = {
+			isa = PBXGroup;
+			children = (
+				DB8BC1AC2C68DBF8008BB62C /* MovieDetailFeature.swift */,
+				DB8BC1AE2C68DD6B008BB62C /* MovieDetailEnvironment.swift */,
+			);
+			path = MovieDetailFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +393,8 @@
 			files = (
 				DB8BC1952C651015008BB62C /* MovieListEnvironment.swift in Sources */,
 				DB8BC1932C650F3F008BB62C /* MovieListFeature.swift in Sources */,
+				DB8BC1AD2C68DBF8008BB62C /* MovieDetailFeature.swift in Sources */,
+				DB8BC1AF2C68DD6B008BB62C /* MovieDetailEnvironment.swift in Sources */,
 				DB8BC0FC2C626252008BB62C /* MovieListView.swift in Sources */,
 				DB8BC0FA2C626252008BB62C /* MovieTCAApp.swift in Sources */,
 			);
@@ -385,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB8BC1B12C68DF3A008BB62C /* MovieDetailFeatureTest.swift in Sources */,
 				DB8BC1A62C6896C3008BB62C /* TCATestSampleCode.swift in Sources */,
 				DB8BC1A82C689AD2008BB62C /* MovieListFeatureTest.swift in Sources */,
 			);

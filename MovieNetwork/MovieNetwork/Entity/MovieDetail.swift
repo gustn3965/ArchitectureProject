@@ -8,18 +8,18 @@
 import Foundation
 
 
-public struct MovieDetailItem: Decodable {
+public struct MovieDetailItem: Decodable, Equatable {
     let adult: Bool
     let backdropPath: String?
     let genreIds: [Int]
-    let id: Int
+    public let id: Int
     let originalLanguage: String
     let originalTitle: String
     let overview: String
     let popularity: Double
     let posterPath: String?
     let releaseDate: String
-    let title: String
+    public let title: String
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
@@ -42,7 +42,7 @@ public struct MovieDetailItem: Decodable {
         case voteCount = "vote_count"
     }
     
-    var moviePosterUrl: URL? {
+    public var moviePosterUrl: URL? {
         guard let posterPath = posterPath else { return nil }
         return URL(string: "https://image.tmdb.org/t/p/original" + posterPath)
     }

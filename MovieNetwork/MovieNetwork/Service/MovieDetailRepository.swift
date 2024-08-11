@@ -13,7 +13,7 @@ public protocol MovieDetailRepositoryProtocol {
     func getDetailMovie(movieTitle: String) -> AnyPublisher<MovieDetailItem, MError>
 }
 
-public class MovieDetailRepository {
+public class MovieDetailRepository: MovieDetailRepositoryProtocol {
     
     private var network: NetworkProtocol
     
