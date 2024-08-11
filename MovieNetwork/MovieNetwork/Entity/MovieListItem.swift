@@ -13,7 +13,7 @@ public struct BoxOfficeResult: Decodable {
     let dailyBoxOfficeList: [MovieListItem]
 }
 
-public struct MovieListItem: Decodable {
+public struct MovieListItem: Decodable, Equatable {
     let rnum: String
     let rank: String
     let rankInten: String

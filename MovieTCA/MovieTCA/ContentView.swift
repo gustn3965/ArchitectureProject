@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct ContentView: View {
-    @ObservedObject var movieFetch = MovieFetch()
+
+    var store: StoreOf<MovieListFeature>
+    
     
     var body: some View {
         VStack {
@@ -19,11 +22,11 @@ struct ContentView: View {
         }
         .padding()
         .onAppear(perform: {
-            movieFetch.fetchMovie()
+//            movieFetch.fetchMovie()
         })
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}

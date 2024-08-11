@@ -11,10 +11,15 @@
 		DB8BC0FC2C626252008BB62C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC0FB2C626252008BB62C /* ContentView.swift */; };
 		DB8BC0FE2C626253008BB62C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC0FD2C626253008BB62C /* Assets.xcassets */; };
 		DB8BC1012C626253008BB62C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC1002C626253008BB62C /* Preview Assets.xcassets */; };
-		DB8BC10B2C626253008BB62C /* MovieTCATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC10A2C626253008BB62C /* MovieTCATests.swift */; };
 		DB8BC1152C626253008BB62C /* MovieTCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1142C626253008BB62C /* MovieTCAUITests.swift */; };
 		DB8BC1172C626253008BB62C /* MovieTCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1162C626253008BB62C /* MovieTCAUITestsLaunchTests.swift */; };
-		DB8BC1352C626D7C008BB62C /* MovieFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1342C626D7C008BB62C /* MovieFetch.swift */; };
+		DB8BC1902C650F1E008BB62C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DB8BC18F2C650F1E008BB62C /* ComposableArchitecture */; };
+		DB8BC1932C650F3F008BB62C /* MovieListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1922C650F3F008BB62C /* MovieListFeature.swift */; };
+		DB8BC1952C651015008BB62C /* MovieListEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1942C651015008BB62C /* MovieListEnvironment.swift */; };
+		DB8BC1A02C651149008BB62C /* MovieNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8BC19D2C651140008BB62C /* MovieNetwork.framework */; };
+		DB8BC1A12C651149008BB62C /* MovieNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB8BC19D2C651140008BB62C /* MovieNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DB8BC1A62C6896C3008BB62C /* TCATestSampleCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1A52C6896C3008BB62C /* TCATestSampleCode.swift */; };
+		DB8BC1A82C689AD2008BB62C /* MovieListFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1A72C689AD2008BB62C /* MovieListFeatureTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,16 +37,16 @@
 			remoteGlobalIDString = DB8BC0F52C626252008BB62C;
 			remoteInfo = MovieTCA;
 		};
-		DB8BC1812C63C823008BB62C /* PBXContainerItemProxy */ = {
+		DB8BC19C2C651140008BB62C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DB8BC17C2C63C823008BB62C /* MovieNetwork.xcodeproj */;
+			containerPortal = DB8BC1972C651140008BB62C /* MovieNetwork.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DB292B8E2C6257B7005F153B;
 			remoteInfo = MovieNetwork;
 		};
-		DB8BC1832C63C823008BB62C /* PBXContainerItemProxy */ = {
+		DB8BC19E2C651140008BB62C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DB8BC17C2C63C823008BB62C /* MovieNetwork.xcodeproj */;
+			containerPortal = DB8BC1972C651140008BB62C /* MovieNetwork.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DB292B982C6257B7005F153B;
 			remoteInfo = MovieNetworkTests;
@@ -55,6 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DB8BC1A12C651149008BB62C /* MovieNetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,13 +74,15 @@
 		DB8BC0FD2C626253008BB62C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB8BC1002C626253008BB62C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB8BC1062C626253008BB62C /* MovieTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB8BC10A2C626253008BB62C /* MovieTCATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTCATests.swift; sourceTree = "<group>"; };
 		DB8BC1102C626253008BB62C /* MovieTCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTCAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8BC1142C626253008BB62C /* MovieTCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTCAUITests.swift; sourceTree = "<group>"; };
 		DB8BC1162C626253008BB62C /* MovieTCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		DB8BC1342C626D7C008BB62C /* MovieFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFetch.swift; sourceTree = "<group>"; };
 		DB8BC1372C62709F008BB62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		DB8BC17C2C63C823008BB62C /* MovieNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MovieNetwork.xcodeproj; path = ../MovieNetwork/MovieNetwork.xcodeproj; sourceTree = "<group>"; };
+		DB8BC1922C650F3F008BB62C /* MovieListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListFeature.swift; sourceTree = "<group>"; };
+		DB8BC1942C651015008BB62C /* MovieListEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListEnvironment.swift; sourceTree = "<group>"; };
+		DB8BC1972C651140008BB62C /* MovieNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MovieNetwork.xcodeproj; path = ../MovieNetwork/MovieNetwork.xcodeproj; sourceTree = "<group>"; };
+		DB8BC1A52C6896C3008BB62C /* TCATestSampleCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCATestSampleCode.swift; sourceTree = "<group>"; };
+		DB8BC1A72C689AD2008BB62C /* MovieListFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListFeatureTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB8BC1A02C651149008BB62C /* MovieNetwork.framework in Frameworks */,
+				DB8BC1902C650F1E008BB62C /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +115,7 @@
 		DB8BC0ED2C626252008BB62C = {
 			isa = PBXGroup;
 			children = (
-				DB8BC17C2C63C823008BB62C /* MovieNetwork.xcodeproj */,
+				DB8BC1972C651140008BB62C /* MovieNetwork.xcodeproj */,
 				DB8BC0F82C626252008BB62C /* MovieTCA */,
 				DB8BC1092C626253008BB62C /* MovieTCATests */,
 				DB8BC1132C626253008BB62C /* MovieTCAUITests */,
@@ -127,10 +137,10 @@
 		DB8BC0F82C626252008BB62C /* MovieTCA */ = {
 			isa = PBXGroup;
 			children = (
+				DB8BC1912C650F33008BB62C /* MovieListFeature */,
 				DB8BC1372C62709F008BB62C /* Info.plist */,
 				DB8BC0F92C626252008BB62C /* MovieTCAApp.swift */,
 				DB8BC0FB2C626252008BB62C /* ContentView.swift */,
-				DB8BC1342C626D7C008BB62C /* MovieFetch.swift */,
 				DB8BC0FD2C626253008BB62C /* Assets.xcassets */,
 				DB8BC0FF2C626253008BB62C /* Preview Content */,
 			);
@@ -148,7 +158,9 @@
 		DB8BC1092C626253008BB62C /* MovieTCATests */ = {
 			isa = PBXGroup;
 			children = (
-				DB8BC10A2C626253008BB62C /* MovieTCATests.swift */,
+				DB8BC1AA2C689BB6008BB62C /* Helper */,
+				DB8BC1A92C689AD5008BB62C /* SampleCode */,
+				DB8BC1A72C689AD2008BB62C /* MovieListFeatureTest.swift */,
 			);
 			path = MovieTCATests;
 			sourceTree = "<group>";
@@ -169,13 +181,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DB8BC17D2C63C823008BB62C /* Products */ = {
+		DB8BC1912C650F33008BB62C /* MovieListFeature */ = {
 			isa = PBXGroup;
 			children = (
-				DB8BC1822C63C823008BB62C /* MovieNetwork.framework */,
-				DB8BC1842C63C823008BB62C /* MovieNetworkTests.xctest */,
+				DB8BC1942C651015008BB62C /* MovieListEnvironment.swift */,
+				DB8BC1922C650F3F008BB62C /* MovieListFeature.swift */,
+			);
+			path = MovieListFeature;
+			sourceTree = "<group>";
+		};
+		DB8BC1982C651140008BB62C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB8BC19D2C651140008BB62C /* MovieNetwork.framework */,
+				DB8BC19F2C651140008BB62C /* MovieNetworkTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DB8BC1A92C689AD5008BB62C /* SampleCode */ = {
+			isa = PBXGroup;
+			children = (
+				DB8BC1A52C6896C3008BB62C /* TCATestSampleCode.swift */,
+			);
+			path = SampleCode;
+			sourceTree = "<group>";
+		};
+		DB8BC1AA2C689BB6008BB62C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +231,9 @@
 			dependencies = (
 			);
 			name = MovieTCA;
+			packageProductDependencies = (
+				DB8BC18F2C650F1E008BB62C /* ComposableArchitecture */,
+			);
 			productName = MovieTCA;
 			productReference = DB8BC0F62C626252008BB62C /* MovieTCA.app */;
 			productType = "com.apple.product-type.application";
@@ -267,12 +306,15 @@
 				Base,
 			);
 			mainGroup = DB8BC0ED2C626252008BB62C;
+			packageReferences = (
+				DB8BC18E2C650F1E008BB62C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = DB8BC0F72C626252008BB62C /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = DB8BC17D2C63C823008BB62C /* Products */;
-					ProjectRef = DB8BC17C2C63C823008BB62C /* MovieNetwork.xcodeproj */;
+					ProductGroup = DB8BC1982C651140008BB62C /* Products */;
+					ProjectRef = DB8BC1972C651140008BB62C /* MovieNetwork.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -285,18 +327,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		DB8BC1822C63C823008BB62C /* MovieNetwork.framework */ = {
+		DB8BC19D2C651140008BB62C /* MovieNetwork.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = MovieNetwork.framework;
-			remoteRef = DB8BC1812C63C823008BB62C /* PBXContainerItemProxy */;
+			remoteRef = DB8BC19C2C651140008BB62C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		DB8BC1842C63C823008BB62C /* MovieNetworkTests.xctest */ = {
+		DB8BC19F2C651140008BB62C /* MovieNetworkTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = MovieNetworkTests.xctest;
-			remoteRef = DB8BC1832C63C823008BB62C /* PBXContainerItemProxy */;
+			remoteRef = DB8BC19E2C651140008BB62C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -332,7 +374,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8BC1352C626D7C008BB62C /* MovieFetch.swift in Sources */,
+				DB8BC1952C651015008BB62C /* MovieListEnvironment.swift in Sources */,
+				DB8BC1932C650F3F008BB62C /* MovieListFeature.swift in Sources */,
 				DB8BC0FC2C626252008BB62C /* ContentView.swift in Sources */,
 				DB8BC0FA2C626252008BB62C /* MovieTCAApp.swift in Sources */,
 			);
@@ -342,7 +385,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8BC10B2C626253008BB62C /* MovieTCATests.swift in Sources */,
+				DB8BC1A62C6896C3008BB62C /* TCATestSampleCode.swift in Sources */,
+				DB8BC1A82C689AD2008BB62C /* MovieListFeatureTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +710,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB8BC18E2C650F1E008BB62C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB8BC18F2C650F1E008BB62C /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB8BC18E2C650F1E008BB62C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB8BC0EE2C626252008BB62C /* Project object */;
 }

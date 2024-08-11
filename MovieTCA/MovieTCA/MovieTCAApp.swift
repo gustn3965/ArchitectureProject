@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+import MovieNetwork
 
 @main
 struct MovieTCAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: .init(
+                initialState: MovieListFeature.State(movieList: []),
+                reducer: {
+                    MovieListFeature(environment: .init(
+                        movieListRepository: MovieListRepository(
+                            network: DefaultNetwork(session: URLSession.shared)
+                        )
+                    ))
+                }
+            ))
         }
     }
 }

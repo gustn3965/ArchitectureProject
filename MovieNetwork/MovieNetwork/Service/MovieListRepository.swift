@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol MovieListRepositoryProtocol {
+public protocol MovieListRepositoryProtocol {
     
     func getMovieList() -> AnyPublisher<[MovieListItem], MError>
 }
