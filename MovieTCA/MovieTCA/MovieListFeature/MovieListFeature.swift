@@ -37,6 +37,7 @@ public struct MovieListFeature: Reducer {
                 return .publisher {
                     environment.movieListRepository
                         .getMovieList()
+                        .receive(on: DispatchQueue.main)
                         .map { Action.movieListResponse(.success($0))}
                         .catch { Just(Action.movieListResponse(.failure($0))) }
                 }
@@ -45,6 +46,7 @@ public struct MovieListFeature: Reducer {
                 state.isLoading = false
                 switch result {
                 case .success(let items):
+                    state.movieList = items
                     print(items)
                 case .failure(let error):
                     print(error)

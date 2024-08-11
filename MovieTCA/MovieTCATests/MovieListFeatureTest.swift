@@ -56,6 +56,7 @@ class MovieListFeatureTest: XCTestCase {
         
         await store.receive(.movieListResponse(.success(expectedMovieListItems)), timeout: 2*NSEC_PER_SEC) {
             $0.isLoading = false
+            $0.movieList = expectedMovieListItems
         }
     }
 }

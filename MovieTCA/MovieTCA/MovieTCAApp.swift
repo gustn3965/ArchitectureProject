@@ -12,7 +12,7 @@ import MovieNetwork
 struct MovieTCAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(store: .init(
+            MovieListView(store: .init(
                 initialState: MovieListFeature.State(movieList: []),
                 reducer: {
                     MovieListFeature(environment: .init(

@@ -25,7 +25,9 @@ public class MovieListRepository: MovieListRepositoryProtocol {
         
         let anyPulbisher: AnyPublisher<BoxOfficeResponse, MError> = network.request(endpoint: MovieEndpoint.movieList)
         
-        return anyPulbisher.map { response in
+        return anyPulbisher
+            .delay(for: .seconds(1), scheduler: DispatchQueue.main)
+            .map { response in
             return response.boxOfficeResult.dailyBoxOfficeList
         }
         .eraseToAnyPublisher()

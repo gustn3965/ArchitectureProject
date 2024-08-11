@@ -15,11 +15,11 @@ public struct BoxOfficeResult: Decodable {
 
 public struct MovieListItem: Decodable, Equatable {
     let rnum: String
-    let rank: String
+    public let rank: String
     let rankInten: String
     let rankOldAndNew: String
-    let movieCd: String
-    let movieTitle: String
+    public let movieCd: String
+    public let movieTitle: String
     let openDt: String
     let salesAmt: String
     let salesShare: String
@@ -29,7 +29,7 @@ public struct MovieListItem: Decodable, Equatable {
     let audiCnt: String
     let audiInten: String
     let audiChange: String
-    let audiAcc: String
+    public let audiAcc: String // 누적관객수 
     let scrnCnt: String
     let showCnt: String
     

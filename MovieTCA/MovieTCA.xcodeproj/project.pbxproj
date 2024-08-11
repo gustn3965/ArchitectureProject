@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB8BC0FA2C626252008BB62C /* MovieTCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC0F92C626252008BB62C /* MovieTCAApp.swift */; };
-		DB8BC0FC2C626252008BB62C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC0FB2C626252008BB62C /* ContentView.swift */; };
+		DB8BC0FC2C626252008BB62C /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC0FB2C626252008BB62C /* MovieListView.swift */; };
 		DB8BC0FE2C626253008BB62C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC0FD2C626253008BB62C /* Assets.xcassets */; };
 		DB8BC1012C626253008BB62C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC1002C626253008BB62C /* Preview Assets.xcassets */; };
 		DB8BC1152C626253008BB62C /* MovieTCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1142C626253008BB62C /* MovieTCAUITests.swift */; };
@@ -70,7 +70,7 @@
 /* Begin PBXFileReference section */
 		DB8BC0F62C626252008BB62C /* MovieTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8BC0F92C626252008BB62C /* MovieTCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTCAApp.swift; sourceTree = "<group>"; };
-		DB8BC0FB2C626252008BB62C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB8BC0FB2C626252008BB62C /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		DB8BC0FD2C626253008BB62C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB8BC1002C626253008BB62C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB8BC1062C626253008BB62C /* MovieTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,7 +140,6 @@
 				DB8BC1912C650F33008BB62C /* MovieListFeature */,
 				DB8BC1372C62709F008BB62C /* Info.plist */,
 				DB8BC0F92C626252008BB62C /* MovieTCAApp.swift */,
-				DB8BC0FB2C626252008BB62C /* ContentView.swift */,
 				DB8BC0FD2C626253008BB62C /* Assets.xcassets */,
 				DB8BC0FF2C626253008BB62C /* Preview Content */,
 			);
@@ -186,6 +185,7 @@
 			children = (
 				DB8BC1942C651015008BB62C /* MovieListEnvironment.swift */,
 				DB8BC1922C650F3F008BB62C /* MovieListFeature.swift */,
+				DB8BC0FB2C626252008BB62C /* MovieListView.swift */,
 			);
 			path = MovieListFeature;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 			files = (
 				DB8BC1952C651015008BB62C /* MovieListEnvironment.swift in Sources */,
 				DB8BC1932C650F3F008BB62C /* MovieListFeature.swift in Sources */,
-				DB8BC0FC2C626252008BB62C /* ContentView.swift in Sources */,
+				DB8BC0FC2C626252008BB62C /* MovieListView.swift in Sources */,
 				DB8BC0FA2C626252008BB62C /* MovieTCAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
