@@ -90,6 +90,7 @@ final class MovieDetailTests: XCTestCase {
 }
 
 class MockTMDBSession: SessionProtocol {
+
     
     var jsonString: String
     
@@ -108,6 +109,18 @@ class MockTMDBSession: SessionProtocol {
             .setFailureType(to: URLError.self)
             .eraseToAnyPublisher()
             
+    }
+    
+    func publisherForRequest(for request: URLRequest) -> AnyPublisher<(data: Data, response: URLResponse), URLError> {
+        guard let jsonData = jsonString.data(using: .utf8) else {
+            return Fail(error: URLError.init(.badURL)).eraseToAnyPublisher()
+        }
+        
+        let response = URLResponse()
+        
+        return Just((data: jsonData, response: response))
+            .setFailureType(to: URLError.self)
+            .eraseToAnyPublisher()
     }
     
     

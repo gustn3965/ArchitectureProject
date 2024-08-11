@@ -23,7 +23,7 @@ public class MovieListRepository: MovieListRepositoryProtocol {
     
     public func getMovieList() -> AnyPublisher<[MovieListItem], MError> {
         
-        let anyPulbisher: AnyPublisher<BoxOfficeResponse, MError> = network.request(endpoint: MovieEndpoint.movieList)
+        let anyPulbisher: AnyPublisher<BoxOfficeResponse, MError> = network.requestURLRequest(endpoint: MovieEndpoint.movieList)
         
         return anyPulbisher
             .delay(for: .seconds(1), scheduler: DispatchQueue.main)

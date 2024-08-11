@@ -23,6 +23,7 @@
 		DB8BC1AD2C68DBF8008BB62C /* MovieDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1AC2C68DBF8008BB62C /* MovieDetailFeature.swift */; };
 		DB8BC1AF2C68DD6B008BB62C /* MovieDetailEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1AE2C68DD6B008BB62C /* MovieDetailEnvironment.swift */; };
 		DB8BC1B12C68DF3A008BB62C /* MovieDetailFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1B02C68DF3A008BB62C /* MovieDetailFeatureTest.swift */; };
+		DB8BC1B32C68E42A008BB62C /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1B22C68E42A008BB62C /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		DB8BC1AC2C68DBF8008BB62C /* MovieDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailFeature.swift; sourceTree = "<group>"; };
 		DB8BC1AE2C68DD6B008BB62C /* MovieDetailEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailEnvironment.swift; sourceTree = "<group>"; };
 		DB8BC1B02C68DF3A008BB62C /* MovieDetailFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailFeatureTest.swift; sourceTree = "<group>"; };
+		DB8BC1B22C68E42A008BB62C /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			children = (
 				DB8BC1AC2C68DBF8008BB62C /* MovieDetailFeature.swift */,
 				DB8BC1AE2C68DD6B008BB62C /* MovieDetailEnvironment.swift */,
+				DB8BC1B22C68E42A008BB62C /* MovieDetailView.swift */,
 			);
 			path = MovieDetailFeature;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				DB8BC1AF2C68DD6B008BB62C /* MovieDetailEnvironment.swift in Sources */,
 				DB8BC0FC2C626252008BB62C /* MovieListView.swift in Sources */,
 				DB8BC0FA2C626252008BB62C /* MovieTCAApp.swift in Sources */,
+				DB8BC1B32C68E42A008BB62C /* MovieDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

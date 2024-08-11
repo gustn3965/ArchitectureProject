@@ -63,6 +63,7 @@ class MovieListFeatureTest: XCTestCase {
 
 
 private class MockKOBISSession: SessionProtocol {
+
     
     var mockJson: String
     
@@ -113,5 +114,17 @@ private class MockKOBISSession: SessionProtocol {
             .setFailureType(to: URLError.self)
             .eraseToAnyPublisher()
     }
+    
+    func publisherForRequest(for request: URLRequest) -> AnyPublisher<(data: Data, response: URLResponse), URLError> {
+        guard let jsonData = mockJson.data(using: .utf8) else {
+            return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
+        }
+        
+        let response = URLResponse()
+        return Just((data: jsonData, response: response))
+            .setFailureType(to: URLError.self)
+            .eraseToAnyPublisher()
+    }
+    
 }
 

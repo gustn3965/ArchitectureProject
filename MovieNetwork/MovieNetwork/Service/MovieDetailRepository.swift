@@ -23,9 +23,10 @@ public class MovieDetailRepository: MovieDetailRepositoryProtocol {
     
     public func getDetailMovie(movieTitle: String) -> AnyPublisher<MovieDetailItem, MError> {
     
-        let publisher: AnyPublisher<MovieDetailResponse, MError> = network.request(endpoint: MovieEndpoint.movieDetail(movieTitle))
+        let publisher: AnyPublisher<MovieDetailResponse, MError> = network.requestURLRequest(endpoint: MovieEndpoint.movieDetail(movieTitle))
         
         return publisher
+            .delay(for: .seconds(1), scheduler: DispatchQueue.main)
             .tryMap({ response in
                 if let firstItem = response.results.first {
                     return firstItem

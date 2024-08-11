@@ -74,6 +74,18 @@ private class MockMovieDetailSession: SessionProtocol {
             
     }
     
+    func publisherForRequest(for request: URLRequest) -> AnyPublisher<(data: Data, response: URLResponse), URLError> {
+        guard let jsonData = jsonString.data(using: .utf8) else {
+            return Fail(error: URLError.init(.badURL)).eraseToAnyPublisher()
+        }
+        
+        let response = URLResponse()
+        
+        return Just((data: jsonData, response: response))
+            .setFailureType(to: URLError.self)
+            .eraseToAnyPublisher()
+    }
+    
 
     static func mockData() -> MockMovieDetailSession {
         

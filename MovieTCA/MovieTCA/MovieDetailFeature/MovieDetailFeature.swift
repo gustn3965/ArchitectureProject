@@ -40,6 +40,7 @@ public struct MovieDetailFeature: Reducer {
                     movieDetaileEnvironment
                         .movieDetailRepository
                         .getDetailMovie(movieTitle: movieTitle)
+                        .receive(on: DispatchQueue.main)
                         .map { Action.movieResponse(.success($0))}
                         .catch { Just(Action.movieResponse(.failure($0)))}
                 }
