@@ -22,6 +22,9 @@ struct MovieListView: View {
                 } else {
                     List(viewStore.movieList, id: \.movieCd) { movie in
                         ListItem(model: ListItem.Model(model: movie))
+                            .onTapGesture {
+                                viewStore.send(.showDetailMovie(movie))
+                            }
                     }
                 }   
             }.onAppear {

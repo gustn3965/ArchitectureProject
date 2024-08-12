@@ -10,7 +10,8 @@ import ComposableArchitecture
 import MovieNetwork
 import Combine
 
-public struct MovieListFeature: Reducer {
+@Reducer
+public struct MovieListFeature {
     
     let environment: MovieListEnvironment
     

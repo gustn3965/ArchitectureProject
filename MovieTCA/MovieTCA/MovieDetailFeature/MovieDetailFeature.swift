@@ -10,7 +10,8 @@ import ComposableArchitecture
 import MovieNetwork
 import Combine
 
-public struct MovieDetailFeature: Reducer {
+@Reducer
+public struct MovieDetailFeature {
     
     private let movieTitle: String
     private let movieDetaileEnvironment: MovieDetailEnvironment

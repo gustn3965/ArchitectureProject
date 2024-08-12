@@ -52,11 +52,11 @@ public struct MovieDetailItemView: View {
             AsyncImage(url: model.moviePosterUrl) { image in
                 image
                     .resizable()
-                                    .aspectRatio(2/3, contentMode: .fill)
+                    .aspectRatio(2/3, contentMode: .fill)
             } placeholder: {
                 Color.gray
             }
-//            .frame(width: geometry.size.width, height: geometry.size.width * 1.5)
+            //            .frame(width: geometry.size.width, height: geometry.size.width * 1.5)
             .cornerRadius(8)
             .clipped()
             .padding([.leading, .top, .bottom], 8)
