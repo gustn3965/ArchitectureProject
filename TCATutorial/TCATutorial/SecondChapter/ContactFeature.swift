@@ -38,10 +38,13 @@ struct ContactsFeature {
                 state.addContact = nil
                 return .none
                 
+                // 1. 아래방식은 자식의 행동을 파악 및 로직을 알아야함.
+//            case .addContact(.presented(.saveButtonTapped)):
+                
+                // 2. delegate로 자식이 부모에게 의도를 전달함으로써 더 나은 코드.
             case .addContact(.presented(.delegate(.saveContact(let contact)))):
                 
                 state.contacts.append(contact)
-//                state.addContact = nil
                 return .none
                 
             case .addContact:

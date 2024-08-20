@@ -20,7 +20,7 @@ struct AddContactFeature {
         case cancelButtonTapped
         case saveButtonTapped
         case setName(String)
-        case delegate(Delegate)
+        case delegate(Delegate) 
         
         enum Delegate {
             case saveContact(Contact)
