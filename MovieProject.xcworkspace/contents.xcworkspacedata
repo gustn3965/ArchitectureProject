@@ -7,4 +7,7 @@
    <FileRef
       location = "group:MovieTCA/MovieTCA.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:TCATutorial/TCATutorial.xcodeproj">
+   </FileRef>
 </Workspace>
