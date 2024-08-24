@@ -11,7 +11,7 @@
 		DB8BC1EF2C74C909008BB62C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1EE2C74C909008BB62C /* ContentView.swift */; };
 		DB8BC1F12C74C90A008BB62C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC1F02C74C90A008BB62C /* Assets.xcassets */; };
 		DB8BC1F52C74C90A008BB62C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC1F42C74C90A008BB62C /* Preview Assets.xcassets */; };
-		DB8BC1FF2C74C90A008BB62C /* TCATutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1FE2C74C90A008BB62C /* TCATutorialTests.swift */; };
+		DB8BC1FF2C74C90A008BB62C /* CounterFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1FE2C74C90A008BB62C /* CounterFeatureTests.swift */; };
 		DB8BC2092C74C90A008BB62C /* TCATutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC2082C74C90A008BB62C /* TCATutorialUITests.swift */; };
 		DB8BC20B2C74C90A008BB62C /* TCATutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC20A2C74C90A008BB62C /* TCATutorialUITestsLaunchTests.swift */; };
 		DB8BC2192C74CB6C008BB62C /* ContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC2182C74CB6C008BB62C /* ContactFeature.swift */; };
@@ -21,6 +21,7 @@
 		DB8BC2222C74CEE8008BB62C /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC2212C74CEE8008BB62C /* AddContactView.swift */; };
 		DB8BC2252C74DEF5008BB62C /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC2242C74DEF5008BB62C /* CounterFeature.swift */; };
 		DB8BC2272C74E004008BB62C /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC2262C74E004008BB62C /* CounterView.swift */; };
+		DB8BC22C2C79BE97008BB62C /* NumberFactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC22B2C79BE97008BB62C /* NumberFactClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,7 @@
 		DB8BC1F22C74C90A008BB62C /* TCATutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TCATutorial.entitlements; sourceTree = "<group>"; };
 		DB8BC1F42C74C90A008BB62C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB8BC1FA2C74C90A008BB62C /* TCATutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCATutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB8BC1FE2C74C90A008BB62C /* TCATutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCATutorialTests.swift; sourceTree = "<group>"; };
+		DB8BC1FE2C74C90A008BB62C /* CounterFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureTests.swift; sourceTree = "<group>"; };
 		DB8BC2042C74C90A008BB62C /* TCATutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCATutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8BC2082C74C90A008BB62C /* TCATutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCATutorialUITests.swift; sourceTree = "<group>"; };
 		DB8BC20A2C74C90A008BB62C /* TCATutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCATutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -58,6 +59,8 @@
 		DB8BC2212C74CEE8008BB62C /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		DB8BC2242C74DEF5008BB62C /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		DB8BC2262C74E004008BB62C /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		DB8BC22A2C777CFD008BB62C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DB8BC22B2C79BE97008BB62C /* NumberFactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 		DB8BC1EB2C74C909008BB62C /* TCATutorial */ = {
 			isa = PBXGroup;
 			children = (
+				DB8BC22A2C777CFD008BB62C /* Info.plist */,
 				DB8BC2232C74DE7D008BB62C /* FirstChapter */,
 				DB8BC2172C74CB5C008BB62C /* SecondChapter */,
 				DB8BC1EC2C74C909008BB62C /* TCATutorialApp.swift */,
@@ -131,7 +135,7 @@
 		DB8BC1FD2C74C90A008BB62C /* TCATutorialTests */ = {
 			isa = PBXGroup;
 			children = (
-				DB8BC1FE2C74C90A008BB62C /* TCATutorialTests.swift */,
+				DB8BC1FE2C74C90A008BB62C /* CounterFeatureTests.swift */,
 			);
 			path = TCATutorialTests;
 			sourceTree = "<group>";
@@ -161,6 +165,7 @@
 			children = (
 				DB8BC2242C74DEF5008BB62C /* CounterFeature.swift */,
 				DB8BC2262C74E004008BB62C /* CounterView.swift */,
+				DB8BC22B2C79BE97008BB62C /* NumberFactClient.swift */,
 			);
 			path = FirstChapter;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				DB8BC2222C74CEE8008BB62C /* AddContactView.swift in Sources */,
 				DB8BC2192C74CB6C008BB62C /* ContactFeature.swift in Sources */,
 				DB8BC2252C74DEF5008BB62C /* CounterFeature.swift in Sources */,
+				DB8BC22C2C79BE97008BB62C /* NumberFactClient.swift in Sources */,
 				DB8BC21E2C74CC92008BB62C /* ContactsView.swift in Sources */,
 				DB8BC2272C74E004008BB62C /* CounterView.swift in Sources */,
 			);
@@ -316,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8BC1FF2C74C90A008BB62C /* TCATutorialTests.swift in Sources */,
+				DB8BC1FF2C74C90A008BB62C /* CounterFeatureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

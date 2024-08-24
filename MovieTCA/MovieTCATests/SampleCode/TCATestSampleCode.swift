@@ -20,6 +20,18 @@ class CounterTests: XCTestCase {
           $0.count = 1
       }
   }
+    
+    func testDD() async {
+        let value = await prrrint()
+        
+        XCTAssert(value == "ABC")
+    }
+    
+    func prrrint() async -> String  {
+        
+        await try? Task.sleep(for: .seconds(1))
+        return "ABC"
+    }
 }
 
 struct TestFeature: Reducer {
