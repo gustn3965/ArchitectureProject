@@ -1,0 +1,31 @@
+//
+//  AppView.swift
+//  TCATutorial
+//
+//  Created by 박현수 on 8/24/24.
+//
+
+import SwiftUI
+import ComposableArchitecture
+struct AppView: View {
+    
+    let store: StoreOf<AppFeature>
+    
+    var body: some View {
+        TabView {
+            CounterView(store: store.scope(state: \.tab1, action: \.tab1))
+                .tabItem { Text("counter 1") }
+            
+            CounterView(store: store.scope(state: \.tab2, action: \.tab2))
+                .tabItem { Text("counter 2") }
+        }
+    }
+}
+
+#Preview {
+  AppView(
+    store: Store(initialState: AppFeature.State()) {
+      AppFeature()
+    }
+  )
+}
