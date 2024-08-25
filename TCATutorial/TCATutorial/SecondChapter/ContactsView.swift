@@ -15,7 +15,16 @@ struct ContactsView: View {
         NavigationStack {
             List {
                 ForEach(store.contacts) { contact in
-                    Text(contact.name)
+                    HStack {
+                        Text(contact.name)
+                        Spacer()
+                        Button {
+                            store.send(.deleteButtonTapped(id: contact.id))
+                        } label: {
+                            Image(systemName: "trash")
+                                .foregroundColor(.red)
+                        }
+                    }
                 }
             }
             .navigationTitle("Contacts")
@@ -30,11 +39,12 @@ struct ContactsView: View {
             }
         }
         // item이 non-nil이게 되면 감지해서 sheet띄워준다.
-        .sheet(item: $store.scope(state: \.addContact, action: \.addContact)) { store in
+        .sheet(item: $store.scope(state: \.destination?.addContact, action: \.destination.addContact)) { store in
             NavigationStack {
                 AddContactView(store: store)
             }
         }
+        .alert($store.scope(state: \.destination?.alert, action: \.destination.alert))
         
     }
 }

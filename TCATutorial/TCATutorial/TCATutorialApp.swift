@@ -11,18 +11,28 @@ import ComposableArchitecture
 @main
 struct TCATutorialApp: App {
     
-    static let store = Store(initialState: CounterFeature.State()) {
+    static let counterStore = Store(initialState: CounterFeature.State()) {
         CounterFeature()
+            ._printChanges()
+    }
+    
+    static let appStore = Store(initialState: AppFeature.State()) {
+        AppFeature()
+            ._printChanges()
+    }
+    
+    static let contactStore = Store(initialState: ContactsFeature.State()) {
+        ContactsFeature()
             ._printChanges()
     }
                              
     var body: some Scene {
         WindowGroup {
-//            ContactsView(store: .init(initialState: ContactsFeature.State(contacts: []), reducer: {
-//                ContactsFeature()
-//            }))
+//            CounterView(store: TCATutorialApp.store)
             
-            CounterView(store: TCATutorialApp.store)
+//            AppView(store: Self.appStore)
+            
+            ContactsView(store: TCATutorialApp.contactStore)
         }
     }
 }
