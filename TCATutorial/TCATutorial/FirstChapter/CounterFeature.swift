@@ -19,7 +19,7 @@ struct CounterFeature {
         var isTimerRunning: Bool = false
     }
     
-    enum Action {
+    enum Action: Equatable{
         case decrementButtonTapped
         case incrementButtonTapped
         case factButtonTapped

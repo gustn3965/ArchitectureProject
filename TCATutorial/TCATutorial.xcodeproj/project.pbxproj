@@ -25,6 +25,7 @@
 		DB8BC22E2C79C381008BB62C /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC22D2C79C381008BB62C /* AppView.swift */; };
 		DB8BC2302C79C468008BB62C /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC22F2C79C468008BB62C /* AppFeature.swift */; };
 		DB8BC2322C79C62D008BB62C /* AppFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC2312C79C62D008BB62C /* AppFeatureTests.swift */; };
+		DB8BC28E2C7AED68008BB62C /* ContactsFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC28D2C7AED68008BB62C /* ContactsFeatureTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		DB8BC22D2C79C381008BB62C /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		DB8BC22F2C79C468008BB62C /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 		DB8BC2312C79C62D008BB62C /* AppFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeatureTests.swift; sourceTree = "<group>"; };
+		DB8BC28D2C7AED68008BB62C /* ContactsFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeatureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				DB8BC1FE2C74C90A008BB62C /* CounterFeatureTests.swift */,
 				DB8BC2312C79C62D008BB62C /* AppFeatureTests.swift */,
+				DB8BC28D2C7AED68008BB62C /* ContactsFeatureTests.swift */,
 			);
 			path = TCATutorialTests;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB8BC2322C79C62D008BB62C /* AppFeatureTests.swift in Sources */,
+				DB8BC28E2C7AED68008BB62C /* ContactsFeatureTests.swift in Sources */,
 				DB8BC1FF2C74C90A008BB62C /* CounterFeatureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
