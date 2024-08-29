@@ -26,6 +26,8 @@
 		DB8BC2302C79C468008BB62C /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC22F2C79C468008BB62C /* AppFeature.swift */; };
 		DB8BC2322C79C62D008BB62C /* AppFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC2312C79C62D008BB62C /* AppFeatureTests.swift */; };
 		DB8BC28E2C7AED68008BB62C /* ContactsFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC28D2C7AED68008BB62C /* ContactsFeatureTests.swift */; };
+		DBFDA4292C7F604F008554DC /* ContactsDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDA4282C7F604F008554DC /* ContactsDetailFeature.swift */; };
+		DBFDA42B2C7F60D1008554DC /* ContactsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDA42A2C7F60D1008554DC /* ContactsDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		DB8BC22F2C79C468008BB62C /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 		DB8BC2312C79C62D008BB62C /* AppFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeatureTests.swift; sourceTree = "<group>"; };
 		DB8BC28D2C7AED68008BB62C /* ContactsFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeatureTests.swift; sourceTree = "<group>"; };
+		DBFDA4282C7F604F008554DC /* ContactsDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDetailFeature.swift; sourceTree = "<group>"; };
+		DBFDA42A2C7F60D1008554DC /* ContactsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 				DB8BC21D2C74CC92008BB62C /* ContactsView.swift */,
 				DB8BC21F2C74CE81008BB62C /* AddContactFeature.swift */,
 				DB8BC2212C74CEE8008BB62C /* AddContactView.swift */,
+				DBFDA4282C7F604F008554DC /* ContactsDetailFeature.swift */,
+				DBFDA42A2C7F60D1008554DC /* ContactsDetailView.swift */,
 			);
 			path = SecondChapter;
 			sourceTree = "<group>";
@@ -325,7 +331,9 @@
 				DB8BC2222C74CEE8008BB62C /* AddContactView.swift in Sources */,
 				DB8BC2192C74CB6C008BB62C /* ContactFeature.swift in Sources */,
 				DB8BC2252C74DEF5008BB62C /* CounterFeature.swift in Sources */,
+				DBFDA42B2C7F60D1008554DC /* ContactsDetailView.swift in Sources */,
 				DB8BC22C2C79BE97008BB62C /* NumberFactClient.swift in Sources */,
+				DBFDA4292C7F604F008554DC /* ContactsDetailFeature.swift in Sources */,
 				DB8BC21E2C74CC92008BB62C /* ContactsView.swift in Sources */,
 				DB8BC22E2C79C381008BB62C /* AppView.swift in Sources */,
 				DB8BC2272C74E004008BB62C /* CounterView.swift in Sources */,
