@@ -10,7 +10,7 @@ import ComposableArchitecture
 
 struct ContactsView: View {
     @Bindable var store: StoreOf<ContactsFeature>
-    
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
             List {
@@ -20,6 +20,7 @@ struct ContactsView: View {
                             Text(contact.name)
                             Spacer()
                             Button {
+                                
                                 store.send(.deleteButtonTapped(id: contact.id))
                             } label: {
                                 Image(systemName: "trash")

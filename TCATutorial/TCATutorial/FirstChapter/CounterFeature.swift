@@ -51,6 +51,7 @@ struct CounterFeature {
                 
                 return .run { [count = state.count] send in
                     let fact = try await numberFact.fetch(count)
+                    
                     await send(.factResponse(fact))
                     
 //                    let (data, _) = try await URLSession.shared.data(from: URL(string: "http://numbersapi.com/\(count)")!)

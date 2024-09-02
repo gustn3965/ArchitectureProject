@@ -13,7 +13,6 @@
 		DB8BC1012C626253008BB62C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8BC1002C626253008BB62C /* Preview Assets.xcassets */; };
 		DB8BC1152C626253008BB62C /* MovieTCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1142C626253008BB62C /* MovieTCAUITests.swift */; };
 		DB8BC1172C626253008BB62C /* MovieTCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1162C626253008BB62C /* MovieTCAUITestsLaunchTests.swift */; };
-		DB8BC1902C650F1E008BB62C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DB8BC18F2C650F1E008BB62C /* ComposableArchitecture */; };
 		DB8BC1932C650F3F008BB62C /* MovieListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1922C650F3F008BB62C /* MovieListFeature.swift */; };
 		DB8BC1952C651015008BB62C /* MovieListEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1942C651015008BB62C /* MovieListEnvironment.swift */; };
 		DB8BC1A02C651149008BB62C /* MovieNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8BC19D2C651140008BB62C /* MovieNetwork.framework */; };
@@ -26,6 +25,7 @@
 		DB8BC1B32C68E42A008BB62C /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1B22C68E42A008BB62C /* MovieDetailView.swift */; };
 		DB8BC1B62C6A4812008BB62C /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1B52C6A4812008BB62C /* AppFeature.swift */; };
 		DB8BC1B82C6A4A63008BB62C /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BC1B72C6A4A63008BB62C /* AppView.swift */; };
+		DBFDA4572C80C753008554DC /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DBFDA4562C80C753008554DC /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,8 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBFDA4572C80C753008554DC /* ComposableArchitecture in Frameworks */,
 				DB8BC1A02C651149008BB62C /* MovieNetwork.framework in Frameworks */,
-				DB8BC1902C650F1E008BB62C /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +266,7 @@
 			);
 			name = MovieTCA;
 			packageProductDependencies = (
-				DB8BC18F2C650F1E008BB62C /* ComposableArchitecture */,
+				DBFDA4562C80C753008554DC /* ComposableArchitecture */,
 			);
 			productName = MovieTCA;
 			productReference = DB8BC0F62C626252008BB62C /* MovieTCA.app */;
@@ -341,7 +341,7 @@
 			);
 			mainGroup = DB8BC0ED2C626252008BB62C;
 			packageReferences = (
-				DB8BC18E2C650F1E008BB62C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				DBFDA4552C80C753008554DC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = DB8BC0F72C626252008BB62C /* Products */;
 			projectDirPath = "";
@@ -752,20 +752,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DB8BC18E2C650F1E008BB62C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		DBFDA4552C80C753008554DC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.12.1;
+				minimumVersion = 1.14.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DB8BC18F2C650F1E008BB62C /* ComposableArchitecture */ = {
+		DBFDA4562C80C753008554DC /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DB8BC18E2C650F1E008BB62C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = DBFDA4552C80C753008554DC /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */

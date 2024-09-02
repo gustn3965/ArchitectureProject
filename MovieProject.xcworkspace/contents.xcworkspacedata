@@ -10,4 +10,7 @@
    <FileRef
       location = "group:TCATutorial/TCATutorial.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:TCASample/TCASample.xcodeproj">
+   </FileRef>
 </Workspace>
