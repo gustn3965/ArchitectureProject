@@ -1,5 +1,5 @@
 //
-//  MovieNetworkTests.swift
+//  MovieBoxOfficeTests.swift
 //  MovieNetworkTests
 //
 //  Created by 박현수 on 8/6/24.
@@ -10,7 +10,7 @@ import Combine
 
 @testable import MovieNetwork
 
-final class MovieListTests: XCTestCase {
+final class MovieBoxOfficeTests: XCTestCase {
     
     var cancellable = Set<AnyCancellable>()
     
@@ -47,7 +47,7 @@ final class MovieListTests: XCTestCase {
                 """
         let mockSession = MockKOBISSession(mockJson: jsonData)
         
-        let movieRepo = MovieListRepository(network: DefaultNetwork(session: mockSession))
+        let movieRepo = MovieBoxOfficeRepository(network: DefaultNetwork(session: mockSession))
         
         performAsyncTest { expectation in
             movieRepo.getMovieList()

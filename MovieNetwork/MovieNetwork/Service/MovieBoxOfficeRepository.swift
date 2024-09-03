@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-public protocol MovieListRepositoryProtocol {
+public protocol MovieBoxOfficeRepositoryProtocol {
     
-    func getMovieList() -> AnyPublisher<[MovieListItem], MError>
+    func getMovieList() -> AnyPublisher<[BoxOfficeItem], MError>
 }
 
-public class MovieListRepository: MovieListRepositoryProtocol {
+public class MovieBoxOfficeRepository: MovieBoxOfficeRepositoryProtocol {
     
     var network: NetworkProtocol
     
@@ -21,9 +21,9 @@ public class MovieListRepository: MovieListRepositoryProtocol {
         self.network = network
     }
     
-    public func getMovieList() -> AnyPublisher<[MovieListItem], MError> {
+    public func getMovieList() -> AnyPublisher<[BoxOfficeItem], MError> {
         
-        let anyPulbisher: AnyPublisher<BoxOfficeResponse, MError> = network.requestURLRequest(endpoint: MovieEndpoint.movieList)
+        let anyPulbisher: AnyPublisher<BoxOfficeResponse, MError> = network.requestURLRequest(endpoint: MovieEndpoint.boxOffice)
         
         return anyPulbisher
             .delay(for: .seconds(1), scheduler: DispatchQueue.main)

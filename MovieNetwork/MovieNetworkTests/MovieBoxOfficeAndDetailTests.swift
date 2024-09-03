@@ -1,5 +1,5 @@
 //
-//  MovieListAndDetailTests.swift
+//  MovieBoxOfficeAndDetailTests.swift
 //  MovieNetworkTests
 //
 //  Created by 박현수 on 8/8/24.
@@ -9,7 +9,7 @@ import XCTest
 import Combine
 @testable import MovieNetwork
 
-final class MovieListAndDetailTests: XCTestCase {
+final class MovieBoxOfficeAndDetailTests: XCTestCase {
 
     var cancellable = Set<AnyCancellable>()
     
@@ -17,7 +17,7 @@ final class MovieListAndDetailTests: XCTestCase {
     func test_KOBIS무비리스트응답정보로_TMDB영화상세정보가져온다() throws {
         
         let mockKobisSession = MockKOBISSession(mockJson: kobisMock)
-        let movieRepo = MovieListRepository(network: DefaultNetwork(session: mockKobisSession))
+        let movieRepo = MovieBoxOfficeRepository(network: DefaultNetwork(session: mockKobisSession))
         
         let mockTMDBSession = MockTMDBSession(jsonString: tmdbMock)
         let movieDetailRepo = MovieDetailRepository(network: DefaultNetwork(session: mockTMDBSession))

@@ -10,10 +10,10 @@ import Foundation
 public struct BoxOfficeResult: Decodable {
     let boxofficeType: String
     let showRange: String
-    let dailyBoxOfficeList: [MovieListItem]
+    let dailyBoxOfficeList: [BoxOfficeItem]
 }
 
-public struct MovieListItem: Decodable, Equatable {
+public struct BoxOfficeItem: Decodable, Equatable {
     let rnum: String
     public let rank: String
     let rankInten: String

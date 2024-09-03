@@ -24,7 +24,9 @@ public protocol Endpoint {
 
 public enum MovieEndpoint: Endpoint {
     
-    case movieList
+    case movieList(String)
+    
+    case boxOffice
     
     case movieDetail(String)
     
@@ -44,7 +46,10 @@ public enum MovieEndpoint: Endpoint {
     
     public var path: String {
         switch self {
-        case .movieList:
+        case .movieList(let movieName):
+            
+            return baseUrl + "/movie/searchMovieList?key=54b9821695ed46aeb98df09fb70f4243&movieNm=\(movieName)&itemPerPage=50"
+        case .boxOffice:
             let now = Date.now
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyyMMdd"
@@ -52,7 +57,7 @@ public enum MovieEndpoint: Endpoint {
             if let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: now) {
                 dateString = formatter.string(from: yesterday)
             }
-            return baseUrl + "/searchDailyBoxOfficeList?key=54b9821695ed46aeb98df09fb70f4243&targetDt=\(dateString)"
+            return baseUrl + "/boxofficesearchDailyBoxOfficeList?key=54b9821695ed46aeb98df09fb70f4243&targetDt=\(dateString)"
         case .movieDetail(let query):
             return baseUrl + "/movie?query=\(query)"
         }
@@ -61,7 +66,9 @@ public enum MovieEndpoint: Endpoint {
     public var baseUrl: String {
         switch self {
         case .movieList:
-            return "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice"
+            return "http://www.kobis.or.kr/kobisopenapi/webservice/rest"
+        case .boxOffice:
+            return "http://www.kobis.or.kr/kobisopenapi/webservice/rest"
         case .movieDetail:
             return "https://api.themoviedb.org/3/search"
         }
@@ -69,7 +76,9 @@ public enum MovieEndpoint: Endpoint {
     
     public var header: [String: String] {
         switch self {
-        case .movieList:
+        case .movieList(_):
+            return [:]
+        case .boxOffice:
             return [:]
         case .movieDetail:
             return ["Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYjY3ODg1MGQ3MGM1NGI0ZjBjMzYyOWQxZDQ1Mjg5OCIsIm5iZiI6MTcyMjg2OTg0OC4xMDYzNDQsInN1YiI6IjVjYzZiYTQ3MGUwYTI2MzNkMGVlYTJhZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mY2JsmZ8j_tGtO7df2XbTSCzTafVybcBhDkudUBstAk"]
@@ -78,7 +87,9 @@ public enum MovieEndpoint: Endpoint {
     
     public var httpMethod: String {
         switch self {
-        case .movieList:
+        case .movieList(_):
+            return "GET"
+        case .boxOffice:
             return "GET"
         case .movieDetail:
             return "GET"

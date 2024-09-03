@@ -13,6 +13,8 @@ struct MovieListView: View {
 
     var store: StoreOf<MovieListFeature>
     
+    @State var text: String = ""
+    
     var body: some View {
         VStack {
             if store.isLoading {
