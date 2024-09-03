@@ -13,30 +13,41 @@ import Combine
 @Reducer
 public struct MovieListFeature {
     
-    let environment: MovieListEnvironment
+//    let environment: MovieListEnvironment
+//    
+//    init(environment: MovieListEnvironment) {
+//        self.environment = environment
+//    }
     
-    init(environment: MovieListEnvironment) {
-        self.environment = environment
-    }
-    
+    @ObservableState
     public struct State: Equatable {
         public var isLoading: Bool = false
-        public var movieList: [MovieListItem]
+        public var movieList: [MovieListItem] = []
     }
     
-    public enum Action: Equatable {
+    public enum Action {
         case start
         case movieListResponse(Result<[MovieListItem], MError>)
         case showDetailMovie(MovieListItem)
+        
+        case delegate(Delegate)
+        
+        public enum Delegate {
+            case showDetail(MovieListItem)
+        }
     }
+    
+    @Dependency(\.movieListClient) var movieListClient
     
     public var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
             case .start:
                 state.isLoading = true
+                
                 return .publisher {
-                    environment.movieListRepository
+                    movieListClient
+                        .movieListRepository
                         .getMovieList()
                         .receive(on: DispatchQueue.main)
                         .map { Action.movieListResponse(.success($0))}
@@ -55,6 +66,13 @@ public struct MovieListFeature {
                 print(result)
                 return .none
             case .showDetailMovie(let item):
+                
+                return .run { send in
+                    await send(.delegate(.showDetail(item)))
+                }
+            case .delegate(.showDetail(_)):
+                return .none
+            case .delegate:
                 return .none
             }
         }

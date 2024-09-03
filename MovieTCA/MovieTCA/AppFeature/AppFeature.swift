@@ -12,31 +12,37 @@ import MovieNetwork
 @Reducer
 public struct AppFeature {
 
-    public struct State: Equatable {
-        
-        var movieListState: MovieListFeature.State
-        
+    @ObservableState
+    public struct State {
+        var path = StackState<Path.State>()
     }
     
-    public enum Action: Equatable {
-        
-        case list(MovieListFeature.Action)
+    public enum Action {
+        case path(StackActionOf<Path>)
+        case startApp
     }
     
-    public var body: some Reducer<State, Action> {
-        Scope(state: \.movieListState, 
-              action: \.list) {
-            MovieListFeature(environment: MovieListEnvironment(movieListRepository: MovieListRepository(network: DefaultNetwork(session: URLSession.shared))))
-        }
-
+    public var body: some ReducerOf<Self> {
+        
         Reduce { state, action in
             switch action {
-            case .list(.showDetailMovie(let item)):
-                print(item)
+            case .startApp:
+                state.path.append(.movieList(MovieListFeature.State()))
+                return .none
+            case .path(.element(id: let id, action: .movieList(.delegate(.showDetail(let item))))):
+                state.path.append(.movieDetail(MovieDetailFeature.State(movieTitle: item.movieTitle)))
                 return .none
             default:
                 return .none
             }
         }
+        .forEach(\.path, action: \.path)
+    }
+    
+    
+    @Reducer
+    public enum Path {
+        case movieList(MovieListFeature)
+        case movieDetail(MovieDetailFeature)
     }
 }

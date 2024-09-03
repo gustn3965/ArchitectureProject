@@ -8,6 +8,8 @@
 import Foundation
 import MovieNetwork
 
+
+// Deprecated 
 public struct MovieDetailEnvironment {
     public let movieDetailRepository: MovieDetailRepositoryProtocol
     

@@ -124,17 +124,20 @@ struct MovieDetailView: View  {
 
 struct MovieListClient {
     var fetch: () async throws -> [Movie]
+    
+    static var mock: MovieListClient = MovieListClient(fetch: {
+            [Movie(name: "베테랑"), Movie(name: "에일리언")]
+        })
+    
+    static var real: MovieListClient = MovieListClient {
+        let (data, _) = try await URLSession.shared.data(from: URL(string: "movie")!)
+        let newMovie = [Movie(name: "리얼")]
+        return newMovie
+    }
 }
 
 extension MovieListClient: DependencyKey {
-    static var liveValue: MovieListClient {
-        Self {
-            return [Movie(name: "베테랑"), Movie(name: "에일리언")]
-//            let (data, _) = try await URLSession.shared.data(from: URL(string: "movie")!)
-//            let newMovie = [Movie()]
-//            return newMovie
-        }
-    }
+    static var liveValue: MovieListClient = Self.real
 }
 
 extension DependencyValues {
@@ -169,6 +172,7 @@ struct AppFeature {
             }
         }.ifLet(\.movieList, action: \.movieList) {
             MovieListFeature()
+                .dependency(\.movieListClient, .real)
         }
 //
 //        Scope(state: \.movieList, action: \.movieList) {

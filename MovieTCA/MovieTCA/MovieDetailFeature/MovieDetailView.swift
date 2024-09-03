@@ -15,20 +15,19 @@ public struct MovieDetailView: View {
     
     public var body: some View {
         
-        WithViewStore(self.store, observe: { $0 }) { viewStore in
-            VStack {
-                if viewStore.isLoading {
-                    ProgressView()
-                } else {
-                    if let movie = viewStore.movie {
-                        MovieDetailItemView(model: MovieDetailItemView.Model(movie: movie))
-                    }
+        VStack {
+            if store.isLoading {
+                ProgressView()
+            } else {
+                if let movie = store.movie {
+                    MovieDetailItemView(model: MovieDetailItemView.Model(movie: movie))
                 }
             }
-            .onAppear {
-                viewStore.send(.start)
-            }
         }
+        .onAppear {
+            store.send(.start)
+        }
+        .navigationTitle(store.movieTitle)
     }
 }
 

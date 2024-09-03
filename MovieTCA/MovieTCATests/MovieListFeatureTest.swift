@@ -42,25 +42,30 @@ class MovieListFeatureTest: XCTestCase {
         
         let mockSession = MockKOBISSession.initWithMockJson()
         
-        let store: TestStoreOf<MovieListFeature> = .init(initialState: MovieListFeature.State(movieList: [])) {
-            MovieListFeature(environment: .init(
-                movieListRepository: MovieListRepository(
-                    network: DefaultNetwork(session: mockSession)
-                )
-            ))
+        let store = TestStore(initialState: MovieListFeature.State()) {
+            MovieListFeature()
+        } withDependencies: { dependency in
+            dependency.movieListClient = MovieListClient(movieListRepository: MovieListRepository(network: DefaultNetwork(session: mockSession)))
+            
         }
+
         
         await store.send(MovieListFeature.Action.start) {
             $0.isLoading = true
         }
         
-        await store.receive(.movieListResponse(.success(expectedMovieListItems)), timeout: 2*NSEC_PER_SEC) {
+        await store.receive(\.movieListResponse.success, timeout: 2*NSEC_PER_SEC) {
             $0.isLoading = false
             $0.movieList = expectedMovieListItems
         }
+//        await store.receive(\.movieListResponse.success(expectedMovieListItems))
+        
+//        await store.receive(.movieListResponse(.success(expectedMovieListItems)), timeout: 2*NSEC_PER_SEC) {
+//            $0.isLoading = false
+//            $0.movieList = expectedMovieListItems
+//        }
     }
 }
-
 
 private class MockKOBISSession: SessionProtocol {
 

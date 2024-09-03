@@ -34,12 +34,13 @@ class MovieDetailFeatureTest: XCTestCase {
             voteCount: 3
         )
         
-        let movieEnvironment: MovieDetailEnvironment = MovieDetailEnvironment(movieDetailRepository: MovieDetailRepository(network: DefaultNetwork(session: MockMovieDetailSession.mockData())))
-        let feature = MovieDetailFeature(movieTitle: "탈주", movieDetaileEnvironment: movieEnvironment)
         
-        let store: TestStoreOf<MovieDetailFeature> = .init(initialState: .init()) {
-            feature
+        let store: TestStoreOf<MovieDetailFeature> = .init(initialState: MovieDetailFeature.State(movieTitle: "탈주")) {
+            MovieDetailFeature()
+        } withDependencies: { dependency in
+            dependency.movieDetailClient = MovieDetailClient(repository: MovieDetailRepository(network: DefaultNetwork(session: MockMovieDetailSession.mockData())))
         }
+
         
         await store.send(.start) {
             $0.isLoading = true

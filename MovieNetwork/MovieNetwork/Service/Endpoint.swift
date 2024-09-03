@@ -45,7 +45,14 @@ public enum MovieEndpoint: Endpoint {
     public var path: String {
         switch self {
         case .movieList:
-            return baseUrl + "/searchDailyBoxOfficeList?key=54b9821695ed46aeb98df09fb70f4243&targetDt=20240803"
+            let now = Date.now
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyyMMdd"
+            var dateString: String = "20240803"
+            if let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: now) {
+                dateString = formatter.string(from: yesterday)
+            }
+            return baseUrl + "/searchDailyBoxOfficeList?key=54b9821695ed46aeb98df09fb70f4243&targetDt=\(dateString)"
         case .movieDetail(let query):
             return baseUrl + "/movie?query=\(query)"
         }

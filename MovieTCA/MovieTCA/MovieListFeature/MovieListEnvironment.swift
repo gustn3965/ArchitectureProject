@@ -8,12 +8,12 @@
 import Foundation
 import MovieNetwork
 
+
+// Deprecated
 public struct MovieListEnvironment {
     public let movieListRepository: MovieListRepositoryProtocol
     
     public init(movieListRepository: MovieListRepositoryProtocol) {
         self.movieListRepository = movieListRepository
     }
-    
-    
 }

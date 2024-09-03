@@ -9,16 +9,32 @@ import Foundation
 import SwiftUI
 import ComposableArchitecture
 import Combine
+import MovieNetwork
 
 public struct AppView: View {
     
-    var store: StoreOf<AppFeature>
+    @Bindable var store: StoreOf<AppFeature>
     
     public var body: some View {
         
-        WithViewStore(store, observe: { $0 }) { viewStore in
-            
-            MovieListView(store: store.scope(state: \.movieListState, action: \.list))
+//        MovieListView(store: store.scope(state: \.movieList, action: \.movieList))
+        
+        NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
+            VStack {
+                Button("App Start") {
+                    store.send(.startApp)
+                }
+            }
+            .navigationTitle("App")
+        } destination: { store in
+            switch store.case {
+            case .movieList(let movieStore):
+                MovieListView(store: movieStore)
+            case .movieDetail(let movieStore):
+                MovieDetailView(store: movieStore)
+            }
         }
+
+        
     }
 }

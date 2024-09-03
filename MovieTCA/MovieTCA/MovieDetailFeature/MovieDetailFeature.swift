@@ -13,23 +13,27 @@ import Combine
 @Reducer
 public struct MovieDetailFeature {
     
-    private let movieTitle: String
-    private let movieDetaileEnvironment: MovieDetailEnvironment
+//    private let movieTitle: String
+//    private let movieDetaileEnvironment: MovieDetailEnvironment
+//    
+//    public init(movieTitle: String, movieDetaileEnvironment: MovieDetailEnvironment) {
+//        self.movieTitle = movieTitle
+//        self.movieDetaileEnvironment = movieDetaileEnvironment
+//    }
     
-    public init(movieTitle: String, movieDetaileEnvironment: MovieDetailEnvironment) {
-        self.movieTitle = movieTitle
-        self.movieDetaileEnvironment = movieDetaileEnvironment
-    }
-    
+    @ObservableState
     public struct State: Equatable {
         var isLoading: Bool = false
         var movie: MovieDetailItem?
+        let movieTitle: String
     }
     
     public enum Action: Equatable {
         case start
         case movieResponse(Result<MovieDetailItem, MError>)
     }
+    
+    @Dependency(\.movieDetailClient) var movieDetailClient
     
     public var body: some Reducer<State, Action> {
         
@@ -38,9 +42,9 @@ public struct MovieDetailFeature {
             case .start:
                 state.isLoading = true
                 return Effect.publisher {
-                    movieDetaileEnvironment
-                        .movieDetailRepository
-                        .getDetailMovie(movieTitle: movieTitle)
+                    movieDetailClient
+                        .repository
+                        .getDetailMovie(movieTitle: state.movieTitle)
                         .receive(on: DispatchQueue.main)
                         .map { Action.movieResponse(.success($0))}
                         .catch { Just(Action.movieResponse(.failure($0)))}
